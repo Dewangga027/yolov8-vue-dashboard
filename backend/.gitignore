@@ -1,0 +1,21 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.npy
+*.pkl
+*.pt
+*.onnx
+.DS_Store
+
+# Virtual environment
+venv/
+env/
+
+# Logs and temp
+*.log
+*.tmp
+
+# Uploaded files
+uploads/
+static/result_*

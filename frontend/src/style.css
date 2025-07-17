@@ -1,0 +1,48 @@
+@import "@fontsource/dm-sans/index.css";
+@import "tailwindcss";
+
+@source "../node_modules/preline/dist/*.js";
+@import "../node_modules/preline/variants.css";
+
+@theme {
+  --color-text: #0D0E12;
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f4f4f5;
+  --color-primary: oklch(0.707 0.165 254.624);
+  --radius-card: 0.40rem;
+  --shadow-card: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
+}
+
+/* 3. Dark‐mode overrides */
+@variant dark {
+  :root {
+    --color-text: #E2E4E9;
+    --color-bg: #0D0E12;
+    --color-surface: #434651;
+    --color-surface-alt: #121317;
+    --color-primary: oklch(0.707 0.165 254.624);
+  }
+}
+
+[v-cloak] { display: none; }
+
+/* 4. Base styles that use your tokens */
+@layer base {
+  html, body {
+    font-family: DM Sans, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.my-card {
+  background: var(--color-surface);
+}
